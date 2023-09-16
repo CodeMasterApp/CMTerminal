@@ -10,9 +10,13 @@ let package = Package(
     ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
+        //.executable(name: "CMTerminal", targets: ["CMTerminal"]),
         .library(
             name: "CMTerminal",
             targets: ["CMTerminal"]),
+    ],
+    dependencies: [
+        // Add dependencies here
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -22,5 +26,6 @@ let package = Package(
         .testTarget(
             name: "CMTerminalTests",
             dependencies: ["CMTerminal"]),
-    ]
+    ],
+    swiftLanguageVersions: [.v5]
 )
